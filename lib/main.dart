@@ -87,7 +87,7 @@ class _LoginDemoState extends State<LoginDemo> {
                       db: 'NM_Master_DB'
                   );
                   final conn = await MySqlConnection.connect(settings);
-                  var results=await conn.query('SELECT * FROM nm_user_login;');
+                  var results=await conn.query('SELECT * FROM nm_master_db.nm_user_login;');
                   for (var row in results) {
                     // ignore: avoid_print
                     print('Name: ${row[0]}, email: ${row[1]} age: ${row[2]}');
